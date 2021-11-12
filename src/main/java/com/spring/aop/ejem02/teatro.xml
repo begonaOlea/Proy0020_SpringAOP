@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+    <bean id="publico" class="com.spring.aop.ejem01.Publico" />
+    <bean id="pianista" class="com.spring.aop.ejem02.Concertista">
+        <property name="obra" value="El bolero de Ravel" />
+    </bean>
+    <aop:config>
+        <aop:aspect ref="publico">
+            <aop:before method="tomarAsiento" pointcut="execution(* *.actuar(..))" />
+        </aop:aspect>
+    </aop:config>
+</beans>
