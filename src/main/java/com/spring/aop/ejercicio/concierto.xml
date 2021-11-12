@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="pianista" class="com.spring.aop.ejercicio.Concertista" >
+		<property name="obra" value="El bolero de Rabel"></property>
+	</bean>
+
+    <bean name="violinista" class="com.spring.aop.ejercicio.Concertista" >
+		<property name="obra" value="desafina"></property>
+	</bean>
+
+</beans>
